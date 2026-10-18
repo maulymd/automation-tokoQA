@@ -13,3 +13,7 @@ node_modules/
 /.auth/
 /docs
 /.agents
+
+# Allure
+allure-results/
+allure-report/

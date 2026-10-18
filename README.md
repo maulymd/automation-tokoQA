@@ -4,6 +4,7 @@
 ![Playwright](https://img.shields.io/badge/Playwright-v1.49+-2EAD33?logo=playwright&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.0+-3178C6?logo=typescript&logoColor=white)
 ![Zod](https://img.shields.io/badge/Contract%20Testing-Zod-3E67B1?logo=zod&logoColor=white)
+![Allure Report](https://img.shields.io/badge/Reporting-Allure-FF7800?logo=qameta&logoColor=white)
 
 Test automation suite enterprise-grade untuk platform e-commerce **TokoQA** ([https://playground.aminhamzah.com](https://playground.aminhamzah.com)), mencakup pengujian **End-to-End (UI)**, **API Testing**, **Contract Testing**, **Hybrid Testing**, dan **Network Mocking** menggunakan **Playwright Test** & **TypeScript**.
 
@@ -169,8 +170,15 @@ npm run test:headed
 # Menjalankan dengan Playwright UI Mode interaktif
 npm run test:ui
 
-# Membuka laporan hasil pengujian (HTML Report)
+# Membuka laporan hasil pengujian (Playwright HTML Report)
 npm run report
+
+# Menghasilkan dan membuka Allure 3 Report (100% Java-free)
+npm run allure:generate
+npm run allure:open
+
+# Atau langsung serve Allure Report secara live
+npm run allure:serve
 ```
 
 ---
@@ -182,7 +190,7 @@ Workflow CI otomatis berjalan pada setiap `push` dan `pull_request` ke branch `m
 1. Menyiapkan environment Node.js 20 dengan caching npm.
 2. Menginstal browser engine Chromium.
 3. Menjalankan seluruh suite pengujian dengan kredensial aman dari **GitHub Secrets**.
-4. Mengunggah **Playwright HTML Report** sebagai artefak (tersimpan 30 hari).
+4. Mengunggah artefak laporan: **Playwright HTML Report** dan **Allure Report** (tersimpan 30 hari).
 
 ---
 
