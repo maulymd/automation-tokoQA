@@ -1,23 +1,35 @@
 {
   "name": "automation-tokoqa",
   "version": "1.0.0",
-  "description": "��#\u0000 \u0000a\u0000u\u0000t\u0000o\u0000m\u0000a\u0000t\u0000i\u0000o\u0000n\u0000-\u0000t\u0000o\u0000k\u0000o\u0000Q\u0000A\u0000\r\u0000 \u0000#\u0000 \u0000a\u0000u\u0000t\u0000o\u0000m\u0000a\u0000t\u0000i\u0000o\u0000n\u0000-\u0000t\u0000o\u0000k\u0000o\u0000Q\u0000A\u0000\r\u0000 \u0000",
+  "description": "Playwright E2E & API Test Automation for TokoQA",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:ui": "playwright test --ui",
+    "test:debug": "playwright test --debug",
+    "test:smoke": "playwright test --grep @smoke",
+    "test:regression": "playwright test --grep @regression",
+    "test:api": "playwright test tests/api",
+    "report": "playwright show-report"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/maulymd/automation-tokoQA.git"
   },
-  "keywords": [],
+  "keywords": [
+    "playwright",
+    "automation",
+    "e2e",
+    "qa",
+    "tokoqa"
+  ],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
-  "bugs": {
-    "url": "https://github.com/maulymd/automation-tokoQA/issues"
-  },
-  "homepage": "https://github.com/maulymd/automation-tokoQA#readme",
   "devDependencies": {
     "@playwright/test": "^1.64.1",
-    "@types/node": "^26.6.5"
+    "@types/node": "^26.6.5",
+    "dotenv": "^16.4.7",
+    "zod": "^3.24.2"
   }
 }
