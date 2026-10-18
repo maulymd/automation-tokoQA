@@ -53,8 +53,9 @@ export const test = base.extend<TokoQAFixtures>({
     // 1. Get token from API
     const authData = await authApi.login(user, pass);
 
-    // 2. Set localStorage token before loading page
-    await page.addInitScript((token) => {
+    // 2. Navigate to base domain first so localStorage can be set for this origin
+    await page.goto('/login-toko.html');
+    await page.evaluate((token) => {
       window.localStorage.setItem('tokoqa_token', token);
     }, authData.token);
 
