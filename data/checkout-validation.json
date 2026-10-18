@@ -1,0 +1,47 @@
+[
+  {
+    "scenario": "nama penerima kosong",
+    "recipient": "",
+    "phone": "081234567890",
+    "street": "Jl. Automation No. 1",
+    "city": "Jakarta",
+    "postal": "10110",
+    "expectedError": "Lengkapi alamat pengiriman dulu. Periksa kolom yang ditandai."
+  },
+  {
+    "scenario": "nomor HP kosong",
+    "recipient": "Rina Wulandari",
+    "phone": "",
+    "street": "Jl. Automation No. 1",
+    "city": "Jakarta",
+    "postal": "10110",
+    "expectedError": "Lengkapi alamat pengiriman dulu. Periksa kolom yang ditandai."
+  },
+  {
+    "scenario": "alamat jalan kosong",
+    "recipient": "Rina Wulandari",
+    "phone": "081234567890",
+    "street": "",
+    "city": "Jakarta",
+    "postal": "10110",
+    "expectedError": "Lengkapi alamat pengiriman dulu. Periksa kolom yang ditandai."
+  },
+  {
+    "scenario": "kota kosong",
+    "recipient": "Rina Wulandari",
+    "phone": "081234567890",
+    "street": "Jl. Automation No. 1",
+    "city": "",
+    "postal": "10110",
+    "expectedError": "Lengkapi alamat pengiriman dulu. Periksa kolom yang ditandai."
+  },
+  {
+    "scenario": "kode pos kosong",
+    "recipient": "Rina Wulandari",
+    "phone": "081234567890",
+    "street": "Jl. Automation No. 1",
+    "city": "Jakarta",
+    "postal": "",
+    "expectedError": "Lengkapi alamat pengiriman dulu. Periksa kolom yang ditandai."
+  }
+]

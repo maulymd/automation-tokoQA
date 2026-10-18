@@ -1,0 +1,26 @@
+[
+  {
+    "name": "password salah",
+    "username": "customer",
+    "password": "wrongpassword123",
+    "expectedError": "Username atau password salah"
+  },
+  {
+    "name": "akun terkunci",
+    "username": "terkunci",
+    "password": "rahasia123",
+    "expectedError": "Akun kamu terkunci. Hubungi admin."
+  },
+  {
+    "name": "username dan password kosong",
+    "username": "",
+    "password": "",
+    "expectedError": "Username dan password wajib diisi"
+  },
+  {
+    "name": "username saja tanpa password",
+    "username": "customer",
+    "password": "",
+    "expectedError": "Username dan password wajib diisi"
+  }
+]
