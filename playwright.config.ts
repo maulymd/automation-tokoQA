@@ -38,6 +38,15 @@ export default defineConfig({
     /* Base URL to use in actions like `await page.goto('')`. */
     baseURL: process.env.BASE_URL || 'https://playground.aminhamzah.com',
 
+    /* Realistic desktop user agent to prevent Cloudflare/bot challenges in CI */
+    userAgent:
+      'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36',
+    extraHTTPHeaders: {
+      'User-Agent':
+        'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36',
+      'Accept-Language': 'id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7',
+    },
+
     /* Action and navigation timeouts */
     actionTimeout: 10_000,
     navigationTimeout: 30_000,
@@ -58,7 +67,12 @@ export default defineConfig({
   projects: [
     {
       name: 'chromium',
-      use: { ...devices['Desktop Chrome'] },
+      use: {
+        ...devices['Desktop Chrome'],
+        launchOptions: {
+          args: ['--disable-blink-features=AutomationControlled'],
+        },
+      },
     },
   ],
 });
