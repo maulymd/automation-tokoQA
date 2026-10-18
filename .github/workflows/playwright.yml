@@ -33,12 +33,12 @@ jobs:
         env:
           CI: true
           BASE_URL: https://playground.aminhamzah.com
-          CUSTOMER_USER: ${{ secrets.CUSTOMER_USER }}
-          CUSTOMER_PASS: ${{ secrets.CUSTOMER_PASS }}
-          ADMIN_USER: ${{ secrets.ADMIN_USER }}
-          ADMIN_PASS: ${{ secrets.ADMIN_PASS }}
-          LOCKED_USER: ${{ secrets.LOCKED_USER }}
-          LOCKED_PASS: ${{ secrets.LOCKED_PASS }}
+          CUSTOMER_USER: ${{ secrets.CUSTOMER_USER || 'customer' }}
+          CUSTOMER_PASS: ${{ secrets.CUSTOMER_PASS || 'rahasia123' }}
+          ADMIN_USER: ${{ secrets.ADMIN_USER || 'admin' }}
+          ADMIN_PASS: ${{ secrets.ADMIN_PASS || 'admin123' }}
+          LOCKED_USER: ${{ secrets.LOCKED_USER || 'terkunci' }}
+          LOCKED_PASS: ${{ secrets.LOCKED_PASS || 'rahasia123' }}
 
       - name: Upload Playwright Report
         uses: actions/upload-artifact@v4
